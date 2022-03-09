@@ -1,11 +1,10 @@
 import VideoListEntry from './VideoListEntry.js';
 
+// { videos, state, function }
 var VideoList = (props) => (
   <div className="video-list">
-    <div><h5><em>videoListEntry</em> test</h5></div>
-    <h1>{console.log(props)}</h1>
     {props.videos.map(video =>
-      <VideoListEntry movie={video}/>
+      <VideoListEntry video={video} state={props.state} function={props.function}/>
     )}
   </div>
 );
